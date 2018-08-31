@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  constructor(afAuth: AngularFireAuth, private router: Router) { }
+  constructor(afAuth: AngularFireAuth, private router: Router, private activatedRoute: ActivatedRoute) { }
   public errorCode: string;
   public errorMessage: string;
 
@@ -35,8 +35,17 @@ export class AuthenticationService {
       });
   }
 
+  toDashboardTest() {
+    this.router.navigate(['/main']);
+  }
+
   logout() {
     firebase.auth().signOut();
+    this.router.navigate(['/login']);
+  }
+
+  toProfile() {
+    this.router.navigate(['/profile'], {relativeTo: this.activatedRoute } );
   }
 
 }

@@ -1,12 +1,17 @@
-import { MatButtonModule, MatCheckboxModule,
-     MatFormFieldModule, 
-     MatSelectModule,
-      MatIconModule,
-      MatInputModule,
-      } from '@angular/material';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { NgModule } from '@angular/core';
+import {
+    MatButtonModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatIconModule,
+    MatInputModule,
+    MatGridListModule,
+} from '@angular/material';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgModule } from '@angular/core';
+import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
     imports: [
@@ -16,7 +21,11 @@ import { NgModule } from '@angular/core';
         MatIconModule,
         MatInputModule,
         MatSelectModule,
-        NgbModule],
+        MatGridListModule,
+        MatListModule,
+        MatMenuModule,
+        NgbModule
+    ],
     exports: [
         MatButtonModule,
         MatCheckboxModule,
@@ -24,6 +33,10 @@ import { NgModule } from '@angular/core';
         MatIconModule,
         MatInputModule,
         MatSelectModule,
-        NgbModule],
+        MatGridListModule,
+        MatListModule,
+        MatMenuModule,
+        NgbModule
+    ],
 })
 export class MaterialModule { }

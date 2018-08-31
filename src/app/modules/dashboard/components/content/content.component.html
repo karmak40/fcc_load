@@ -1,0 +1,18 @@
+<div class="content-inside-grid">
+    <mat-nav-list>
+      <mat-list-item *ngFor="let link of links">
+        <a matLine href="...">{{ link }}</a>
+        <button mat-icon-button (click)="showInfo(link)">
+          <mat-icon>info</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-nav-list>
+  </div>
+
+  <mat-list-item *ngFor="let message of messages">
+    <h3 matLine> {{message.from}} </h3>
+    <p matLine>
+      <span> {{message.subject}} </span>
+      <span class="demo-2"> -- {{message.content}} </span>
+    </p>
+</mat-list-item>

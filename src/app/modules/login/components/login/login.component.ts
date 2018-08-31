@@ -42,4 +42,8 @@ export class LoginComponent implements OnInit {
     }, 2000)
   }
 
+  public testLogin() {  //todo delete later
+    this.authenticationService.toDashboardTest();
+  }
+
 }

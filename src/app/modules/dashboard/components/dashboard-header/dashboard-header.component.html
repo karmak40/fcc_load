@@ -1,0 +1,6 @@
+<div>
+	<button mat-raised-button (click)="logout()">Log out</button>
+	<button mat-raised-button color="primary" *ngIf="!profileOpened" (click)="showProfile()">Show my Profile</button>
+
+	<button mat-raised-button color="primary" *ngIf="profileOpened" (click)="showDashboard()">Back to Dashboard</button>
+</div>
